@@ -1,0 +1,100 @@
+/* renderer/styles.css */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+}
+.blive-sc-panel {
+    position: fixed;
+    width: 380px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    /* 关键: 允许拖拽整个面板 */
+    -webkit-app-region: drag; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.blive-sc-header {
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #fb7299, #ff1f4b);
+    color: white;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
+    user-select: none;
+}
+.blive-sc-title { font-size: 16px; font-weight: 600; }
+.blive-sc-controls { display: flex; gap: 8px; }
+.blive-sc-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    /* 关键: 确保按钮可点击 */
+    -webkit-app-region: no-drag; 
+}
+.blive-sc-btn:hover { background: rgba(255, 255, 255, 0.4); }
+.blive-sc-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    /* 关键: 确保 SC 列表可滚动 */
+    -webkit-app-region: no-drag; 
+}
+.blive-sc-content::-webkit-scrollbar { width: 6px; }
+.blive-sc-content::-webkit-scrollbar-thumb { background: #fb7299; border-radius: 6px; }
+.blive-sc-content::-webkit-scrollbar-track { background: #f0f0f0; }
+.blive-sc-empty {
+    text-align: center;
+    color: #999;
+    padding: 40px 20px;
+}
+.sc_long_item .sc_msg_body { display: block; }
+.sc_long_item[data-fold="1"] .sc_msg_body { display: none; }
+.fans_medal_item {
+    color: #ffffff;
+    height: 14px;
+    line-height: 14px;
+    border-radius: 2px;
+    display: inline-flex;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+.fans_medal_label { padding: 0 3px; }
+.fans_medal_level {
+    color: #06154c;
+    background-color: #ffffff;
+    padding: 0 3px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+}
+@keyframes sc_fadenum {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.sc-read-marker {
+    color: white;
+    background-color: #00b8d9; 
+    padding: 1px 6px; 
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 5px; 
+    display: inline-flex; 
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s;
+    height: 14px; 
+}
+.sc_long_item.read .sc-read-marker { opacity: 1; }
