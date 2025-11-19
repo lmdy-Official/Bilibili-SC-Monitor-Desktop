@@ -37,12 +37,12 @@
 
 将本项目克隆到您的本地：
 
-git clone YOUR_REPO_URL
+    // git clone YOUR_REPO_URL
 cd Bilibili-SC-Monitor-Desktop
 
 ### 2. 安装依赖
 
-npm install
+    // npm install
 
 ### 3. 配置 B站认证（敏感信息隔离）
 
@@ -50,17 +50,17 @@ a. 创建配置文件： 将根目录下的 config.example.js 文件复制并重
 
 b. 填写信息： 打开 config.js，将 USER_COOKIE 和 USER_UID 替换为您从 B站获取的实际值。
 
-// config.js
-module.exports = {
-    USER_COOKIE: '在此填写您从B站网页获取的完整Cookie字符串', // ⬅️ 必须填写，否则可能无法连接
-    USER_UID: 0,   // 请填写您的 B站用户UID
-};
+    // config.js
+       module.exports = {
+       USER_COOKIE: '在此填写您从B站网页获取的完整Cookie字符串', // ⬅️ 必须填写，否则可能无法连接
+       USER_UID: 0,   // 请填写您的 B站用户UID
+       };
 
 ### 4. 运行应用
 
-npm start
+    // npm start
 
-📄 核心代码解析
+## 📄 核心代码解析
 我们通过调整 SUPER_CHAT_MESSAGE 事件监听器，确保只处理有效的 SC 消息，并使用 data.data.data 访问真正的 SC 数据：
 // renderer/renderer.js (核心逻辑片段)
 liveInstance.on('SUPER_CHAT_MESSAGE', (data) => {
@@ -75,9 +75,9 @@ liveInstance.on('SUPER_CHAT_MESSAGE', (data) => {
     } else {
         console.log("[WS] 收到一条非 SC 消息 (如删除或列表更新)，已忽略。", data);
     }
-});
+    });
 
-💖 贡献与致谢
+## 💖 贡献与致谢
 感谢 tiny-bilibili-ws 开发者提供的稳定 WebSocket 解决方案。
 
 欢迎提交 Issue 和 Pull Request 来改进 UI 或增加持久化存储等功能。
