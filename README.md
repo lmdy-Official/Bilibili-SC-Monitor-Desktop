@@ -38,7 +38,7 @@
 将本项目克隆到您的本地：
 
     // git clone YOUR_REPO_URL
-cd Bilibili-SC-Monitor-Desktop
+       cd Bilibili-SC-Monitor-Desktop
 
 ### 2. 安装依赖
 
