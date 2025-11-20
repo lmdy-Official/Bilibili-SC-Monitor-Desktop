@@ -14,8 +14,10 @@
 
 ## 📸 运行截图 (Placeholder)
 
-![alt text](3a50d99f24684fd6de97d9fcfd1e7ac2-2.png)
-![alt text](2412dc08b1a0679a21f31dddd31bd66f-1.png)
+<img width="1910" height="945" alt="3a50d99f24684fd6de97d9fcfd1e7ac2" src="https://github.com/user-attachments/assets/022eced1-5f52-4061-b9ae-7300671902bd" />
+
+<img width="1685" height="769" alt="2412dc08b1a0679a21f31dddd31bd66f" src="https://github.com/user-attachments/assets/6e341083-bdaa-44aa-baa8-74c1d075ac9e" />
+
 
 ## 🛠️ 技术栈
 
